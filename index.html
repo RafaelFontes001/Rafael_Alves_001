@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Estoque - TI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<h1>📦 Estoque de Informática - TI</h1>
+
+<div class="container">
+    <div class="form-box">
+        <h3>➕ Adicionar novo item</h3>
+        <label>Nome do equipamento:</label><br>
+        <input type="text" id="nomeItem" placeholder="ex: Mouse, Teclado, Monitor"><br>
+        
+        <label>Categoria:</label><br>
+        <select id="categoriaItem">
+            <option>Periférico</option>
+            <option>Hardware interno</option>
+            <option>Rede</option>
+            <option>Monitor/Display</option>
+            <option>Outro</option>
+        </select><br>
+        
+        <label>Quantidade:</label><br>
+        <input type="number" id="quantItem" value="1" min="0"><br>
+        
+        <label>Localização (sala/prateleira):</label><br>
+        <input type="text" id="localItem" placeholder="Ex: Sala 2B, Prateleira 3"><br>
+        
+        <button onclick="adicionarItem()">Inserir no estoque</button>
+    </div>
+    
+    <h3>📋 Itens cadastrados</h3>
+    <table id="tabelaEstoque">
+        <thead>
+            <tr><th>Equipamento</th><th>Categoria</th><th>Qtd</th><th>Local</th><th>Status</th><th></th></tr>
+        </thead>
+        <tbody id="corpoTabela">
+            <!-- dados aparecem aqui -->
+        </tbody>
+    </table>
+    <br>
+    <button onclick="gerarRelatorio()">📄 Gerar relatório rápido</button>
+    <span id="msgRelatorio" style="margin-left: 15px; background:#f5f0cc; padding:6px;"></span>
+</div>
+
+<div class="footer">
+    Sistema de controle interno - TI v0.2 (beta)
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
